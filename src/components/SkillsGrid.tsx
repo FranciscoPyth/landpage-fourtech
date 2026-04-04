@@ -63,23 +63,23 @@ const skillsData = [
 const SkillsGrid: React.FC = () => {
   return (
     <div>
-      <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Habilidades de nuestro equipo</h3>
+      <h3 className="text-3xl font-bold text-white mb-12 text-center">Habilidades de nuestro equipo</h3>
       <div className="grid md:grid-cols-3 gap-8">
         {skillsData.map((skill, index) => (
           <div 
             key={index} 
-            className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+            className="glass-dark p-6 rounded-2xl hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_10px_30px_rgba(17,76,90,0.3)] border border-brand-teal/20"
           >
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-brand-teal/20 to-brand-teal/5 border border-brand-teal/30 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
               <FontAwesomeIcon 
                 icon={skill.icon} 
-                className="text-2xl text-blue-600" 
+                className="text-2xl text-brand-orange" 
               />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-3 text-center">
+            <h4 className="text-xl font-bold text-white mb-3 text-center group-hover:text-brand-orange transition-colors">
               {skill.title}
             </h4>
-            <p className="text-gray-600 text-center">
+            <p className="text-gray-400 text-center leading-relaxed">
               {skill.description}
             </p>
           </div>

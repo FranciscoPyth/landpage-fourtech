@@ -7,30 +7,40 @@ const AboutSection: React.FC = () => {
   const t = translations[language];
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">{t.about.title}</h3>
-            <div className="overflow-hidden rounded-lg">
+    <section id="about" className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-brand-teal/5 rounded-full blur-[100px] -z-0"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="relative group perspective-1000">
+            <div className="absolute -inset-4 bg-gradient-to-r from-brand-teal to-brand-orange rounded-2xl opacity-20 group-hover:opacity-40 blur-xl transition-opacity duration-500"></div>
+            <div className="overflow-hidden rounded-2xl shadow-2xl relative transform transition-transform duration-500 group-hover:scale-[1.02]">
               <img 
                 src="/assets/fondo_equipo.png" 
                 alt="Early days" 
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                className="w-full h-[500px] object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent"></div>
             </div>
           </div>
           <div>
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">{t.about.subtitle}</h4>
-            <p className="text-gray-600 mb-6">{t.about.description}</p>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">2+</div>
-                <div className="text-gray-600">{t.about.stats.years}</div>
+            <h3 className="text-sm font-bold text-brand-orange uppercase tracking-wider mb-2">Nosotros</h3>
+            <h4 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">{t.about.title}</h4>
+            <p className="text-lg text-gray-600 mb-10 leading-relaxed">{t.about.description}</p>
+            
+            <div className="grid grid-cols-2 gap-8">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-orange mb-2">
+                  2+
+                </div>
+                <div className="text-brand-dark font-medium">{t.about.stats.years}</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">99%</div>
-                <div className="text-gray-600">{t.about.stats.satisfaction}</div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-orange mb-2">
+                  99%
+                </div>
+                <div className="text-brand-dark font-medium">{t.about.stats.satisfaction}</div>
               </div>
             </div>
           </div>
