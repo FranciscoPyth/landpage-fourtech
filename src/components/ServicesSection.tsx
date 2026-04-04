@@ -31,24 +31,35 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-          {t.services.title}
-        </h3>
-        <div className="grid md:grid-cols-3 gap-8">
+    <section id="services" className="py-24 bg-brand-dark relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand-teal/10 rounded-full blur-[100px]"></div>
+        <div className="absolute top-1/2 right-0 w-[30rem] h-[30rem] bg-brand-orange/5 rounded-full blur-[120px]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h3 className="text-sm font-bold text-brand-orange uppercase tracking-wider mb-2">Qué Hacemos</h3>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {t.services.title}
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-brand-teal to-brand-orange mx-auto rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="glass-dark p-8 rounded-2xl hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_10px_30px_rgba(17,76,90,0.3)] border border-brand-teal/20 hover:border-brand-teal/50"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <FontAwesomeIcon icon={skill.icon} className="text-2xl text-blue-600" />
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-brand-teal/20 to-brand-teal/5 border border-brand-teal/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <FontAwesomeIcon icon={skill.icon} className="text-3xl text-brand-orange" />
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3 text-center">
+              <h4 className="text-xl font-bold text-white mb-4 group-hover:text-brand-orange transition-colors">
                 {skill.title}
               </h4>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-400 leading-relaxed">
                 {skill.description}
               </p>
             </div>

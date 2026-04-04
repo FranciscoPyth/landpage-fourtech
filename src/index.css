@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-gray-50 text-gray-900;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  
+  .glass-dark {
+    @apply bg-brand-dark/80 backdrop-blur-xl border border-brand-teal/30;
+  }
+  
+  .neo-glow {
+    @apply shadow-[0_0_15px_rgba(255,153,50,0.5)];
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-teal to-brand-orange bg-clip-text text-transparent;
+  }
+}
