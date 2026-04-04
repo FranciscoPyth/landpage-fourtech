@@ -8,7 +8,7 @@ export const translations = {
       contact: 'Contact'
     },
     hero: {
-      title: 'Your vision, our creation. Welcome to 4Tech.',
+      title: 'Your vision, our creation.',
       subtitle: 'Build and transform your ideas with us. In Fourtech everything is possible.',
       cta: 'Discover Our Solutions'
     },
@@ -110,7 +110,7 @@ export const translations = {
       contact: 'Contacto'
     },
     hero: {
-      title: 'Tu visión, nuestra creación. Bienvenido a 4Tech.',
+      title: 'Tu visión, nuestra creación.',
       subtitle: 'Construye y transforma tus ideas con nosotros. En Fourtech todo es posible.',
       cta: 'Descubre Nuestras Soluciones'
     },
